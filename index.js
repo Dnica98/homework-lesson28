@@ -3,7 +3,7 @@ const promiseTest = document.getElementById('promiseTest')
 const userID = 1
 
 function displayData(data) {
-    const dataElement = document.createElement('ol')
+    const dataElement = document.createElement('li')
     dataElement.innerText= JSON.stringify(data, null)
     promiseTest.appendChild(dataElement)
 }
@@ -28,8 +28,6 @@ fetch('https://jsonplaceholder.typicode.com/users', {
     method: 'POST',
     body: JSON.stringify({
         name: 'Leanne Graham',
-        email:'Sincere@april.biz',
-        username: 'Bret'
     }),
     headers:{
         'Content-type': 'application/json; charset-UTF-8',
